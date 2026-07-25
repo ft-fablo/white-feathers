@@ -16,7 +16,7 @@ const CAPABILITIES: CapabilityItem[] = [
     id: 1,
     title: "Paper Digital Printing",
     desc: "High-speed, high-resolution digital printing for short runs, corporate stationery, brochures, and marketing collaterals.",
-    image: "/capabilities/digital-printing.jpg",
+    image: "/capabilities/paper-digital-printing.jpg",
     tag: "High Precision"
   },
   {
@@ -51,7 +51,7 @@ const CAPABILITIES: CapabilityItem[] = [
     id: 6,
     title: "Screen Printing",
     desc: "Artisanal high-density ink application for luxury packaging, apparel, tote bags, and textured custom surfaces.",
-    image: "/capabilities/digital-printing.jpg",
+    image: "/capabilities/screen-printing.jpeg",
     tag: "Tactile Finish"
   }
 ];
