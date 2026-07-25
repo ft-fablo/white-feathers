@@ -17,10 +17,13 @@ export function Contact() {
           </div>
 
           <div className="space-y-8 text-accent-grey mb-16">
-            <div className="flex flex-col">
+            <div className="flex flex-col space-y-1">
               <span className="text-xs font-bold text-foreground mb-1 uppercase tracking-widest opacity-80">Phone</span>
               <a href="tel:+971522309749" className="text-lg hover:text-[#c09757] transition-colors">
                 +971 522309749
+              </a>
+              <a href="tel:+97165207131" className="text-lg hover:text-[#c09757] transition-colors">
+                +971 65207131
               </a>
             </div>
             <div className="flex flex-col">

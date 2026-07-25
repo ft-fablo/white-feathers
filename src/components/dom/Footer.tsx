@@ -23,6 +23,10 @@ export function Footer() {
             <Phone className="w-4 h-4 text-[#c09757]" />
             <span>+971 522309749</span>
           </a>
+          <a href="tel:+97165207131" className="flex items-center gap-2 hover:text-[#c09757] transition-colors">
+            <Phone className="w-4 h-4 text-[#c09757]" />
+            <span>+971 65207131</span>
+          </a>
           <a href="mailto:sales@whitefeathers.com" className="flex items-center gap-2 hover:text-[#c09757] transition-colors">
             <Mail className="w-4 h-4 text-[#c09757]" />
             <span>sales@whitefeathers.com</span>
