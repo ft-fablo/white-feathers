@@ -3,6 +3,7 @@ import { About } from "@/components/dom/About";
 import { CTA } from "@/components/dom/CTA";
 import { Services } from "@/components/dom/Services";
 import { Gallery } from "@/components/dom/Gallery";
+import { Clients } from "@/components/dom/Clients";
 import { Contact } from "@/components/dom/Contact";
 import { Footer } from "@/components/dom/Footer";
 
@@ -16,6 +17,7 @@ export default function Home() {
         <CTA />
         <Services />
         <Gallery />
+        <Clients />
         <Contact />
         <Footer />
       </div>
