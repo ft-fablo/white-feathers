@@ -16,42 +16,42 @@ const CAPABILITIES: CapabilityItem[] = [
     id: 1,
     title: "Paper Digital Printing",
     desc: "High-speed, high-resolution digital printing for short runs, corporate stationery, brochures, and marketing collaterals.",
-    image: "/services/card.png",
+    image: "/capabilities/digital-printing.jpg",
     tag: "High Precision"
   },
   {
     id: 2,
     title: "Offset Printing",
     desc: "Commercial high-volume printing delivering razor-sharp text, consistent Pantone color accuracy, and premium finishing.",
-    image: "/services/box.png",
+    image: "/capabilities/offset-printing.jpg",
     tag: "High Volume"
   },
   {
     id: 3,
     title: "Large Format Printing",
     desc: "Vibrant outdoor billboards, retail window decals, trade show backdrops, and weather-resistant vinyl banners.",
-    image: "/services/advertising.png",
+    image: "/capabilities/large-format.jpg",
     tag: "Outdoor & POS"
   },
   {
     id: 4,
     title: "Sublimation Printing",
     desc: "Deep dye-sublimation fused into performance fabrics, sportswear, soft signage, and custom textiles with zero fading.",
-    image: "/services/fabric.png",
+    image: "/capabilities/sublimation-printing.jpg",
     tag: "Textiles & Apparel"
   },
   {
     id: 5,
     title: "UV Printing",
     desc: "Direct-to-substrate UV ink curing on acrylic, anodized metal, bamboo, glass, and specialty promotional items.",
-    image: "/services/promotional.png",
+    image: "/capabilities/uv-printing.jpg",
     tag: "Multi-Substrate"
   },
   {
     id: 6,
     title: "Screen Printing",
     desc: "Artisanal high-density ink application for luxury packaging, apparel, tote bags, and textured custom surfaces.",
-    image: "/services/corparate.png",
+    image: "/capabilities/offset-printing.jpg",
     tag: "Tactile Finish"
   }
 ];
@@ -76,14 +76,14 @@ export function Gallery() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
           {CAPABILITIES.map((item) => (
             <div key={item.id} className="flex flex-col gap-3.5 group">
-              {/* 1. SEPARATE SERVICE TITLE (Always visible, centered above the image card) */}
+              {/* 1. SEPARATE SERVICE TITLE */}
               <div className="px-1 text-center">
                 <h3 className="text-lg sm:text-xl font-bold text-foreground group-hover:text-[#c09757] transition-colors leading-tight text-center">
                   {item.title}
                 </h3>
               </div>
 
-              {/* 2. IMAGE CARD (Aspect ratio 3.5:2, transforms Image -> Description on hover) */}
+              {/* 2. IMAGE CARD */}
               <div className="relative w-full aspect-[3.5/2] rounded-[30px] overflow-hidden bg-card border border-border group-hover:border-[#c09757] shadow-sm group-hover:shadow-2xl transition-all duration-500 cursor-pointer">
                 {/* Default State: ONLY the Service Image */}
                 <div className="absolute inset-0 w-full h-full z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none">
@@ -95,7 +95,7 @@ export function Gallery() {
                   />
                 </div>
 
-                {/* Hover State: Service Description (Smoothly fades in inside the image card) */}
+                {/* Hover State: Service Description */}
                 <div className="absolute inset-0 z-20 p-6 sm:p-7 flex flex-col justify-between opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-700 ease-out bg-background/95 dark:bg-card/95">
                   <div>
                     <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#c09757]/15 border border-[#c09757]/30 text-[#c09757] text-xs font-semibold uppercase mb-3">
