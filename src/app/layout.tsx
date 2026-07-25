@@ -5,6 +5,7 @@ import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { TopographyBackground } from "@/components/layout/TopographyBackground";
+import { FloatingContactButtons } from "@/components/layout/FloatingContactButtons";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
           <SmoothScroll>
             <TopographyBackground />
             <ThemeToggle />
+            <FloatingContactButtons />
             {children}
           </SmoothScroll>
         </ThemeProvider>
