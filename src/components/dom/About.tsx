@@ -24,17 +24,16 @@ export function About() {
                 </div>
 
                 {/* Right Side: Copy */}
-                <div className="w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center relative">
+                <div className="w-full md:w-1/2 p-8 sm:p-12 md:p-16 flex flex-col justify-center relative">
                     {/* Liquid Glass Font Styling Container */}
-                    <div className="relative inline-block mb-8">
+                    <div className="relative inline-block mb-6">
                         <span className="absolute inset-0 blur-xl bg-white/10 dark:bg-black/10 rounded-full w-full h-full mix-blend-overlay"></span>
-                        <h2 className="relative text-4xl md:text-6xl font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-[#3e1c13] via-[#c09757] to-[#3e1c13] dark:from-[#c09757] dark:via-[#f7f2de] dark:to-[#c09757] drop-shadow-md">
+                        <h2 className="relative text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-[#3e1c13] via-[#c09757] to-[#3e1c13] dark:from-[#c09757] dark:via-[#f7f2de] dark:to-[#c09757] drop-shadow-md">
                             Who We Are
                         </h2>
                     </div>
-                    <p className="text-lg md:text-2xl font-light text-accent-grey leading-relaxed">
+                    <p className="text-base sm:text-lg md:text-xl font-light text-accent-grey leading-relaxed">
                         Founded in 2020, White Feathers is a premier printing and design studio dedicated to elevating brands through quality, creativity, and precision. We combine cutting-edge technology with skilled craftsmanship to deliver high-quality printing solutions that make an impact. From business materials and marketing collateral to signage and personalized products, we bring ideas to life with exceptional service, attention to detail, and a commitment to excellence.
-
                     </p>
                 </div>
 
