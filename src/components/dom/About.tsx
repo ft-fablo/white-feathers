@@ -10,15 +10,15 @@ export function About() {
                 {/* Left Side: Brand Logo Card */}
                 <div className="w-full md:w-1/2 bg-[#efe8d1] dark:bg-[#18140f] flex items-center justify-center p-8 md:p-12 relative">
                     <div className="w-72 h-44 sm:w-80 sm:h-48 bg-card rounded-2xl shadow-2xl skew-y-3 sm:skew-y-6 transform hover:skew-y-0 hover:scale-105 transition-all duration-700 flex flex-col items-center justify-center p-6 border border-border/80 group">
-                        <img 
-                            src="/logo-transparent.png" 
-                            alt="White Feathers Logo" 
-                            className="w-full max-w-[220px] h-auto object-contain dark:hidden group-hover:scale-105 transition-transform" 
+                        <img
+                            src="/logo-transparent.png"
+                            alt="White Feathers Logo"
+                            className="w-full max-w-[220px] h-auto object-contain dark:hidden group-hover:scale-105 transition-transform"
                         />
-                        <img 
-                            src="/logo-dark-theme.png" 
-                            alt="White Feathers Logo" 
-                            className="w-full max-w-[220px] h-auto object-contain hidden dark:block group-hover:scale-105 transition-transform" 
+                        <img
+                            src="/logo-dark-theme.png"
+                            alt="White Feathers Logo"
+                            className="w-full max-w-[220px] h-auto object-contain hidden dark:block group-hover:scale-105 transition-transform"
                         />
                     </div>
                 </div>
@@ -33,7 +33,8 @@ export function About() {
                         </h2>
                     </div>
                     <p className="text-lg md:text-2xl font-light text-accent-grey leading-relaxed">
-                        White Feathers is a premier printing and design studio dedicated to elevating brands through tactile excellence. We merge cutting-edge technology with artisanal craftsmanship to deliver materials that don&apos;t just speak—they resonate.
+                        Founded in 2020, White Feathers is a premier printing and design studio dedicated to elevating brands through quality, creativity, and precision. We combine cutting-edge technology with skilled craftsmanship to deliver high-quality printing solutions that make an impact. From business materials and marketing collateral to signage and personalized products, we bring ideas to life with exceptional service, attention to detail, and a commitment to excellence.
+
                     </p>
                 </div>
 
