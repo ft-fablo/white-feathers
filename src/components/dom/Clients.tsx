@@ -40,21 +40,23 @@ function ClientCard({ client }: { client: ClientLogo }) {
     <motion.div
       whileHover={{ scale: 1.05, y: -4 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className="relative aspect-[16/9] rounded-2xl bg-background/80 dark:bg-background/40 border border-border/80 hover:border-[#c09757] p-4 flex items-center justify-center shadow-sm hover:shadow-xl transition-all duration-300 group overflow-hidden cursor-pointer"
+      className="relative aspect-[16/9] rounded-2xl bg-card border border-border hover:border-[#c09757] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 group cursor-pointer"
     >
-      <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative w-full h-full">
         {!hasError ? (
           <Image
             src={imgSrc}
             alt={client.name}
             fill
-            className="object-contain filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+            className="object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
             onError={handleError}
           />
         ) : (
-          <span className="text-xs sm:text-sm font-semibold tracking-wider text-accent-grey group-hover:text-[#c09757] transition-colors select-none text-center">
-            {client.name}
-          </span>
+          <div className="w-full h-full flex items-center justify-center p-4">
+            <span className="text-xs sm:text-sm font-semibold tracking-wider text-accent-grey group-hover:text-[#c09757] transition-colors select-none text-center">
+              {client.name}
+            </span>
+          </div>
         )}
       </div>
     </motion.div>
