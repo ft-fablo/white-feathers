@@ -51,7 +51,7 @@ const CAPABILITIES: CapabilityItem[] = [
     id: 6,
     title: "Screen Printing",
     desc: "Artisanal high-density ink application for luxury packaging, apparel, tote bags, and textured custom surfaces.",
-    image: "/capabilities/offset-printing.jpg",
+    image: "/capabilities/digital-printing.jpg",
     tag: "Tactile Finish"
   }
 ];
