@@ -1,6 +1,6 @@
 import { SERVICES_DATA, ServiceDetail, ProductItem } from "@/data/servicesData";
 
-const WORDPRESS_API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL;
+const WORDPRESS_API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL || "https://1207866.us16.myftpupload.com/graphql";
 
 /**
  * Fetch GraphQL data from WordPress instance
