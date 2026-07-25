@@ -3,7 +3,7 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { useLenis } from "@studio-freight/react-lenis";
+import { useLenis } from "lenis/react";
 import {
   Home,
   User,
