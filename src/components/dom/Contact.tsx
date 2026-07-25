@@ -46,6 +46,12 @@ export function Contact() {
               WhatsApp
             </a>
             <a
+              href="mailto:sales@whitefeathers.com"
+              className="px-6 py-3 rounded-full border border-border bg-card hover:bg-border/50 hover:scale-[1.02] transition-all text-foreground font-medium text-sm shadow-sm"
+            >
+              Email / Gmail
+            </a>
+            <a
               href="https://www.instagram.com/__white_feathers__"
               target="_blank"
               rel="noopener noreferrer"
