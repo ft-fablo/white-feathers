@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { TopographyBackground } from "@/components/layout/TopographyBackground";
 import { FloatingContactButtons } from "@/components/layout/FloatingContactButtons";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +28,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || process.env.NEXT_PUBLIC_GA_ID || "AW-17945040562";
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -46,6 +49,7 @@ export default function RootLayout({
             {children}
           </SmoothScroll>
         </ThemeProvider>
+        {gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
     </html>
   );
