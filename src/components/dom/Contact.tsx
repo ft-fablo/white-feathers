@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { trackGoogleConversion } from "@/lib/gtag";
 
 export function Contact() {
   const [name, setName] = useState("");
@@ -59,6 +60,7 @@ export function Contact() {
               href="https://wa.me/971522309749"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackGoogleConversion()}
               className="px-6 py-3 rounded-full border border-border bg-card hover:bg-border/50 hover:scale-[1.02] transition-all text-foreground font-medium text-sm shadow-sm"
             >
               WhatsApp

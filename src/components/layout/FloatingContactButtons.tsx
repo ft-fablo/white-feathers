@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, MessageCircle } from "lucide-react";
+import { trackGoogleConversion } from "@/lib/gtag";
 
 interface FloatingPillProps {
   label: string;
@@ -10,9 +11,10 @@ interface FloatingPillProps {
   href: string;
   accentColor?: string;
   isExternal?: boolean;
+  onClick?: () => void;
 }
 
-function FloatingPillButton({ label, icon: Icon, href, accentColor, isExternal }: FloatingPillProps) {
+function FloatingPillButton({ label, icon: Icon, href, accentColor, isExternal, onClick }: FloatingPillProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -21,6 +23,7 @@ function FloatingPillButton({ label, icon: Icon, href, accentColor, isExternal }
       href={href}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
+      onClick={onClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onFocus={() => setIsHovered(true)}
@@ -69,6 +72,7 @@ export function FloatingContactButtons() {
         label="Call Us"
         icon={Phone}
         href="tel:+971522309749"
+        onClick={() => trackGoogleConversion()}
       />
 
       {/* 2. WhatsApp Button */}
@@ -78,6 +82,7 @@ export function FloatingContactButtons() {
         href="https://wa.me/971522309749"
         accentColor="text-emerald-600 dark:text-emerald-400"
         isExternal
+        onClick={() => trackGoogleConversion()}
       />
     </div>
   );
