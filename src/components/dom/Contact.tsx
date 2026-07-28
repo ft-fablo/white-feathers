@@ -1,8 +1,23 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 export function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(
+      name ? `Project Inquiry from ${name}` : "New Project Inquiry"
+    );
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    );
+    window.location.href = `mailto:sales@whitefeathersarts.com?subject=${subject}&body=${body}`;
+  };
+
   return (
     <section id="contact" className="relative w-full py-12 p-4 pointer-events-auto">
       <div className="w-full max-w-7xl mx-auto min-h-[80vh] rounded-[40px] bg-card shadow-lg flex flex-col md:flex-row overflow-hidden border border-border">
@@ -28,8 +43,8 @@ export function Contact() {
             </div>
             <div className="flex flex-col">
               <span className="text-xs font-bold text-foreground mb-1 uppercase tracking-widest opacity-80">Email</span>
-              <a href="mailto:sales@whitefeathers.com" className="text-lg hover:text-[#c09757] transition-colors">
-                sales@whitefeathers.com
+              <a href="mailto:sales@whitefeathersarts.com" className="text-lg hover:text-[#c09757] transition-colors">
+                sales@whitefeathersarts.com
               </a>
             </div>
             <div className="flex flex-col">
@@ -49,7 +64,7 @@ export function Contact() {
               WhatsApp
             </a>
             <a
-              href="mailto:sales@whitefeathers.com"
+              href="mailto:sales@whitefeathersarts.com"
               className="px-6 py-3 rounded-full border border-border bg-card hover:bg-border/50 hover:scale-[1.02] transition-all text-foreground font-medium text-sm shadow-sm"
             >
               Email / Gmail
@@ -83,18 +98,42 @@ export function Contact() {
             </h2>
           </div>
 
-          <form onSubmit={(e) => e.preventDefault()} className="flex flex-col space-y-6">
+          <form onSubmit={handleSubmit} className="flex flex-col space-y-6">
             <div className="flex flex-col group">
               <label className="text-xs font-bold text-foreground mb-2 uppercase tracking-widest opacity-80 group-focus-within:opacity-100 transition-opacity">Name</label>
-              <input type="text" suppressHydrationWarning placeholder="John Doe" className="bg-card border border-border rounded-2xl px-5 py-4 text-foreground focus:outline-none focus:border-primary/50 focus:ring-4 focus:ring-primary/10 transition-all shadow-sm" />
+              <input
+                type="text"
+                suppressHydrationWarning
+                placeholder="John Doe"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                className="bg-card border border-border rounded-2xl px-5 py-4 text-foreground focus:outline-none focus:border-primary/50 focus:ring-4 focus:ring-primary/10 transition-all shadow-sm"
+              />
             </div>
             <div className="flex flex-col group">
               <label className="text-xs font-bold text-foreground mb-2 uppercase tracking-widest opacity-80 group-focus-within:opacity-100 transition-opacity">Email</label>
-              <input type="email" suppressHydrationWarning placeholder="john@example.com" className="bg-card border border-border rounded-2xl px-5 py-4 text-foreground focus:outline-none focus:border-primary/50 focus:ring-4 focus:ring-primary/10 transition-all shadow-sm" />
+              <input
+                type="email"
+                suppressHydrationWarning
+                placeholder="john@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="bg-card border border-border rounded-2xl px-5 py-4 text-foreground focus:outline-none focus:border-primary/50 focus:ring-4 focus:ring-primary/10 transition-all shadow-sm"
+              />
             </div>
             <div className="flex flex-col group">
               <label className="text-xs font-bold text-foreground mb-2 uppercase tracking-widest opacity-80 group-focus-within:opacity-100 transition-opacity">Message</label>
-              <textarea rows={4} suppressHydrationWarning placeholder="Tell us about your project..." className="bg-card border border-border rounded-2xl px-5 py-4 text-foreground focus:outline-none focus:border-primary/50 focus:ring-4 focus:ring-primary/10 transition-all shadow-sm resize-none"></textarea>
+              <textarea
+                rows={4}
+                suppressHydrationWarning
+                placeholder="Tell us about your project..."
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+                className="bg-card border border-border rounded-2xl px-5 py-4 text-foreground focus:outline-none focus:border-primary/50 focus:ring-4 focus:ring-primary/10 transition-all shadow-sm resize-none"
+              ></textarea>
             </div>
             <button type="submit" suppressHydrationWarning className="bg-[#c09757] text-[#3e1c13] font-bold py-4 rounded-2xl hover:bg-[#3e1c13] hover:text-[#f7f2de] transition-all hover:-translate-y-1 shadow-lg hover:shadow-xl mt-4 border border-transparent">
               Send Message
