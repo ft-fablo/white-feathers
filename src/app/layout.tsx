@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { TopographyBackground } from "@/components/layout/TopographyBackground";
 import { FloatingContactButtons } from "@/components/layout/FloatingContactButtons";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,13 +29,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const gaId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || process.env.NEXT_PUBLIC_GA_ID || "AW-17945040562";
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || "GTM-NRFKSLG4";
 
   return (
     <html lang="en" suppressHydrationWarning>
+      <GoogleTagManager gtmId={gtmId} />
       <body
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
